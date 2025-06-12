@@ -1,86 +1,119 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Fazenda Alto do Jequitibá</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fazenda [Nome] - Gado de Corte</title>
   <style>
-    body {
-      font-family: 'Segoe UI', sans-serif;
-      background-color: #f5f1eb;
-      margin: 0;
+    body { font-family: 'Segoe UI', sans-serif; margin: 0; background: #EDEAE3; color: #2f2f2f; }
+    header { background: url('resources/hero2.jpg') no-repeat center center/cover; height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; color: white; text-shadow: 1px 1px 2px #000; text-align: center; }
+    header h1 { font-size: 3em; margin: 0.5em 0; }
+    header button { background: #2c573d; color: white; padding: 1em 2em; border: none; border-radius: 6px; font-size: 1em; cursor: pointer; }
+    nav {
+      background: #F7EAC9;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      display: flex;
+      justify-content: space-around;
       padding: 0;
-      color: #333;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      z-index: 999;
     }
-    header {
-      background-color: #6d4c41;
-      color: white;
-      padding: 40px 20px;
-      text-align: center;
+    nav a {
+      text-decoration: none;
+      color: #2c573d;
+      font-weight: bold;
     }
-    header h1 {
-      margin: 0;
-      font-size: 2.8rem;
-    }
-    main {
-      padding: 40px 20px;
-      max-width: 900px;
-      margin: 0 auto;
-    }
-    section {
-      margin-bottom: 40px;
-    }
-    h2 {
-      color: #6d4c41;
-    }
-    .contact {
-      background-color: #e8e0d6;
-      padding: 20px;
-      border-radius: 8px;
-    }
-    footer {
-      background-color: #d7ccc8;
-      text-align: center;
-      padding: 20px;
-      font-size: 0.9rem;
-    }
+    section { padding: 4em 2em; max-width: 1000px; margin: auto; }
+    h2 { color: #2c573d; font-size: 2em; margin-bottom: 1em; }
+    .features, .icons { display: flex; flex-wrap: wrap; gap: 2em; }
+    .feature, .icon { flex: 1; min-width: 250px; background: white; padding: 1.5em; border-radius: 8px; box-shadow: 0 2px 6px rgba(0,0,0,0.05); }
+    .icon img { width: 40px; height: 40px; }
+    footer { background: #2c573d; color: white; text-align: center; padding: 2em 1em; }
   </style>
 </head>
 <body>
+  <nav>
+    <div style="display: flex; align-items: center;">
+      <a href="#inicio">
+        <img src="resources/logo.png" alt="Logo da Fazenda" style="height: 100px; margin-right: 1em;">
+      </a>
+    </div>
+    <div style="display: flex; gap: 2em; align-items: center;">
+      <a href="#inicio">Início</a>
+      <a href="#fazenda">A Fazenda</a>
+      <a href="#genetica">Genética</a>
+      <a href="#sustentabilidade">Sustentabilidade</a>
+      <a href="#contato">Contato</a>
+    </div>
+  </nav>
 
-  <header>
-    <h1>Fazenda Alto do Jequitibá</h1>
-    <p>Tradição, família e pecuária de qualidade em Carinhanha - BA</p>
+  <header id="inicio">
+    <h1>Tradição no campo. Excelência no gado de corte.</h1>
+    <button>Conheça nossa história</button>
   </header>
 
-  <main>
-    <section>
-      <h2>Sobre a Fazenda</h2>
-      <p>A Fazenda Alto do Jequitibá é uma propriedade familiar situada em Carinhanha, no coração do sertão baiano. Com raízes profundas na tradição agropecuária, nosso foco principal é a criação de gado de corte, sempre com responsabilidade, respeito à terra e dedicação à qualidade.</p>
-    </section>
+  <section id="fazenda">
+    <h2>A Fazenda</h2>
+    <div class="features">
+      <div class="feature">
+        <p>Há mais de 20 anos, cultivando qualidade com respeito à terra e aos animais. Uma fazenda familiar comprometida com boas práticas e raízes no campo.</p>
+        <p>Possui matrizes selecionadas com auxílio técnico apropriado, reprodutores de alto padrão, manejo inteligente e fartura na base alimentar.</p>
+        <p>Dedicada à recria intensiva a pasto, a Fazenda Alto do Jequitibá se destaca também por seu foco em sustentabilidade, possuindo +80% de sua matriz energética composta por fontes renováveis de energia.</p>
+      </div>
+      <div class="feature">
+        <img src="resources/hero.jpeg" alt="Foto da fazenda" style="width:100%; border-radius:8px;">
+      </div>
+    </div>
+  </section>
 
-    <section>
-      <h2>Nossos Valores</h2>
-      <ul>
-        <li>☑ Tradição e compromisso familiar</li>
-        <li>☑ Bem-estar animal e manejo consciente</li>
-        <li>☑ Sustentabilidade e cuidado com a terra</li>
-        <li>☑ Qualidade na produção e confiança nas relações</li>
-      </ul>
-    </section>
+  <section id="genetica">
+    <h2>Genética & Qualidade</h2>
+    <div class="icons">
+      <div class="icon">
+        <img src="dna-icon.png" alt="Genética">
+        <h3>Genética Selecionada</h3>
+        <p>Matrizes e reprodutores de alto desempenho.</p>
+      </div>
+      <div class="icon">
+        <img src="chart-icon.png" alt="Desempenho">
+        <h3>Desempenho Comprovado</h3>
+        <p>Avaliações e resultados da recria.</p>
+      </div>
+      <div class="icon">
+        <img src="leaf-icon.png" alt="Criação a pasto">
+        <h3>Criação a pasto</h3>
+        <p>Manejo rotacionado e bem-estar animal.</p>
+      </div>
+    </div>
+  </section>
 
-    <section class="contact">
-      <h2>Contato</h2>
-      <p>Quer saber mais sobre nossa fazenda ou conversar conosco?</p>
-      <p><strong>Email:</strong> contato@altodojequitiba.com.br</p>
-      <p><strong>Telefone/WhatsApp:</strong> (77) 9 9999-9999</p>
-      <p><strong>Localização:</strong> Zona Rural, Carinhanha - BA</p>
-    </section>
-  </main>
+  <section id="sustentabilidade">
+    <h2>Sustentabilidade</h2>
+    <div class="icons">
+      <div class="icon">
+        <img src="solar-icon.png" alt="Energia Solar">
+        <h3>Energia Solar</h3>
+        <p>Uso extensivo de energia limpa.</p>
+      </div>
+      <div class="icon">
+        <img src="water-icon.png" alt="Reuso de Água">
+        <h3>Reuso de Água</h3>
+        <p>Captação e reuso de água da chuva.</p>
+      </div>
+      <div class="icon">
+        <img src="offgrid-icon.png" alt="Off-grid">
+        <h3>Sistema Off-grid</h3>
+        <p>Produção independente e sustentável.</p>
+      </div>
+    </div>
+  </section>
 
-  <footer>
-    © Fazenda Alto do Jequitibá - Todos os direitos reservados
+  <footer id="contato">
+    <p>Fazenda Alto do Jequitibá • contato@fazendanome.com.br • (00) 00000-0000</p>
+    <p>Localização: [Endereço completo]</p>
+    <p>“Ser sustentável é honrar a terra que nos sustenta.”</p>
   </footer>
-
 </body>
 </html>
